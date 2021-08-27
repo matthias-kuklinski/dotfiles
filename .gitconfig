@@ -1,3 +1,6 @@
 [user]
 name = Matthias Kuklinski
 email = contact@matthias-kuklinski.com
+
+[init]
+defaultBranch = main
