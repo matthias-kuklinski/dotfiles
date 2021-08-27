@@ -16,4 +16,5 @@ c = commit -m
 d = diff
 p = push
 r = restore
+rs = restore --staged
 s = status
