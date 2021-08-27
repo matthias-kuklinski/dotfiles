@@ -4,3 +4,6 @@ email = contact@matthias-kuklinski.com
 
 [init]
 defaultBranch = main
+
+[core]
+editor = nvim
