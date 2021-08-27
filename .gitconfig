@@ -14,6 +14,7 @@ af = add -f
 ap = add -p
 c = commit -m
 d = diff
+ds = diff --staged
 p = push
 r = restore
 rs = restore --staged
