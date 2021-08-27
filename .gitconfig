@@ -7,3 +7,13 @@ defaultBranch = main
 
 [core]
 editor = nvim
+
+[alias]
+a = add
+af = add -f
+ap = add -p
+c = commit -m
+d = diff
+p = push
+r = restore
+s = status
