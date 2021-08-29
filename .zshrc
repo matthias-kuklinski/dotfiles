@@ -20,3 +20,6 @@ alias l="ls --color=auto"
 alias ll="ls -al --color=auto"
 alias c="clear"
 alias n="nvim"
+
+# Prompt
+eval "$(starship init zsh)" # Initialize starship prompt.
