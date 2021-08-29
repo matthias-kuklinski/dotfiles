@@ -14,3 +14,9 @@ bindkey "^?" backward-delete-char # Fix backspace-bug after leaving insert mode.
 zstyle :compinstall filename '/home/matthias/.zshrc' # Reference the configuration file for compinstall.
 autoload -Uz compinit # Mark the completion system as a function.
 compinit # Initialize the completion system.
+
+# Aliases
+alias l="ls --color=auto"
+alias ll="ls -al --color=auto"
+alias c="clear"
+alias n="nvim"
