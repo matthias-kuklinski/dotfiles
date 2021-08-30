@@ -4,3 +4,7 @@ add_newline = false
 read_only = " "
 style = "bold #61afef"
 truncate_to_repo = false
+
+[git_branch]
+symbol = " "
+style = "bold #c678dd"
