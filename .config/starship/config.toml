@@ -8,3 +8,13 @@ truncate_to_repo = false
 [git_branch]
 symbol = " "
 style = "bold #c678dd"
+
+[git_status]
+ahead = "${count}"
+behind = "${count}"
+diverged = "${ahead_count}${behind_count}"
+staged = "${count}"
+deleted = "${count}"
+untracked = "${count}"
+modified = "${count}"
+style = "bold #e06c75"
