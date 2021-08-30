@@ -1,1 +1,6 @@
 add_newline = false
+
+[directory]
+read_only = " "
+style = "bold #61afef"
+truncate_to_repo = false
