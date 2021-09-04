@@ -2,12 +2,12 @@ add_newline = false
 
 [directory]
 read_only = " "
-style = "bold #61afef"
+style = "bold blue"
 truncate_to_repo = false
 
 [git_branch]
 symbol = " "
-style = "bold #c678dd"
+style = "bold blue"
 
 [git_status]
 ahead = "${count}"
@@ -17,4 +17,4 @@ staged = "${count}"
 deleted = "${count}"
 untracked = "${count}"
 modified = "${count}"
-style = "bold #e06c75"
+style = "bold red"
