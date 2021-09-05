@@ -10,8 +10,7 @@ export KEYTIMEOUT=1 # Wait 10 milliseconds for another key to be pressed.
 unsetopt beep # Do not beep on erros.
 
 # Key-Bindings
-bindkey -v # Enable vi-mode.
-bindkey "^?" backward-delete-char # Fix backspace-bug after leaving insert mode.
+bindkey -v '^?' backward-delete-char # Enable vi-mode and fix backspace-bug after leaving insert mode.
 
 # Completion system
 zstyle :compinstall filename '/home/matthias/.zshrc' # Reference the configuration file for compinstall.
