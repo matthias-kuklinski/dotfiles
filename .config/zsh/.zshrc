@@ -1,7 +1,7 @@
 # Constants
-HISTSIZE=1000 # Amount of commands loaded into memory from the history file.
-SAVEHIST=1000 # Amount of commands stored in the history file.
 HISTFILE=~/.config/zsh/zshhistory # Location of the history file.
+HISTSIZE=10000 # Amount of commands loaded into memory from the history file.
+SAVEHIST=10000 # Amount of commands stored in the history file.
 
 # Environment Variables
 export KEYTIMEOUT=1 # Wait 10 milliseconds for another key to be pressed.
