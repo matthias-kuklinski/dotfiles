@@ -12,6 +12,9 @@ unsetopt beep # Do not beep on erros.
 # Key-Bindings
 bindkey -v '^?' backward-delete-char # Enable vi-mode and fix backspace-bug after leaving insert mode.
 
+# Highlights
+zle_highlight=('paste:none') # Don't highlight pasted content.
+
 # Completion system
 zstyle :compinstall filename '/home/matthias/.zshrc' # Reference the configuration file for compinstall.
 autoload -Uz compinit # Mark the completion system as a function.
