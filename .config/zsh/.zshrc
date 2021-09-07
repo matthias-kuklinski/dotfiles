@@ -26,8 +26,8 @@ alias n="nvim"
 # Vi-mode
 function zle-keymap-select () {
   case $KEYMAP in
-    vicmd) echo -ne '\e[1 q';;      # Block cursor.
-    viins|main) echo -ne '\e[5 q';; # Beam cursor.
+    vicmd) echo -ne '\e[1 q';;      # Display a block-shaped cursor.
+    viins|main) echo -ne '\e[5 q';; # Display a beam-shaped cursor.
   esac
 }
 zle -N zle-keymap-select
@@ -35,8 +35,8 @@ zle -N zle-keymap-select
 zle-line-init() { echo -ne '\e[5 q' }
 zle -N zle-line-init
 
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' } # Use beam shape cursor for each new prompt.
+echo -ne '\e[5 q' # Display a beam-shaped cursor on startup.
+preexec() { echo -ne '\e[5 q' } # Display a beam-shaped cursor for each new prompt.
 
 # Prompt
 eval "$(starship init zsh)" # Initialize starship prompt.
