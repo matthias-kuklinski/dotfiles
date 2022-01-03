@@ -23,6 +23,7 @@ compinit # Initialize the completion system.
 # Aliases
 alias l="ls --color=auto"
 alias ll="ls -hl --color=auto"
+alias lll="ls -Ahl --color=auto"
 alias c="clear"
 alias n="nvim"
 
