@@ -21,3 +21,6 @@ style = "bold red"
 
 [hostname]
 format = "[$hostname](bold blue) in "
+
+[username]
+format = "[$user](bold blue) on "
