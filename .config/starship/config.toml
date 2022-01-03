@@ -18,3 +18,6 @@ deleted = "${count}"
 untracked = "${count}"
 modified = "${count}"
 style = "bold red"
+
+[hostname]
+format = "[$hostname](bold blue) in "
