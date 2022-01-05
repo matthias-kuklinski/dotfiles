@@ -1,2 +1,2 @@
-utils = require "utils"
-utils.setOptions(require("options"))
+utils = require("core.utils")
+utils.setOptions(require("core.options"))
