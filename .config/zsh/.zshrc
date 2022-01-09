@@ -21,9 +21,8 @@ autoload -Uz compinit # Mark the completion system as a function.
 compinit # Initialize the completion system.
 
 # Aliases
-alias l="ls --color=auto"
-alias ll="ls -hl --color=auto"
-alias lll="ls -Ahl --color=auto"
+alias l="ls -hl --color=auto"
+alias ll="ls -Ahl --color=auto"
 alias c="clear"
 alias n="nvim"
 
