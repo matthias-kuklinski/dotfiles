@@ -10,6 +10,7 @@ return {
   number = true,                    -- Show line numbers.
   relativenumber = true,            -- Show relative line numbers.
   shiftwidth = 2,                   -- Insert 2 spaces on each intendation.
+  shortmess = "I",                  -- Hide the intro message.
   smartcase = true,                 -- Override ignorecase option if the search pattern contains upper case characters.
   tabstop = 2,                      -- Insert 2 space characters for a tab.
   termguicolors = true,             -- Enable 24-bit RGB color in the TUI.
