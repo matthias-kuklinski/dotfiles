@@ -1,6 +1,6 @@
 # Start the ssh-agent on user login.
 [Unit]
-Description=ssh-agent
+Description=Start the ssh-agent
 
 [Service]
 Type=simple
