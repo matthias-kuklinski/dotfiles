@@ -80,3 +80,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+### Visuals
+default_border pixel 2
+default_floating_border pixel 2
+client.focused #61afef #61afef #61afef #fbfbfe
+smart_borders on
+gaps outer -4
+gaps inner 8
