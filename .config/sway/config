@@ -1,0 +1,11 @@
+### Constants
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
+set $browser firefox-developer-edition
+set $pass keepassxc
+set $launcher fuzzel
