@@ -9,3 +9,7 @@ set $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
 set $browser firefox-developer-edition
 set $pass keepassxc
 set $launcher fuzzel
+
+### Outputs (identifiers can be requested through: swaymsg -t get_outputs)
+output * adaptive_sync on bg #000000 solid_color
+output DP-2 resolution 2560x1440 position 0,0
