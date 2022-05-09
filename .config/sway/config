@@ -91,3 +91,7 @@ gaps inner 8
 
 ### Assignments (identifiers can be requested through: swaymsg -t get_tree | grep app_id)
 assign [app_id="firefoxdeveloperedition"] 1
+
+### Floating Windows
+for_window [app_id="mpv"] floating enable
+for_window [app_id="keepassxc"] floating enable
