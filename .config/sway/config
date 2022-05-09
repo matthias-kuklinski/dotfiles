@@ -88,3 +88,6 @@ client.focused #61afef #61afef #61afef #fbfbfe
 smart_borders on
 gaps outer -4
 gaps inner 8
+
+### Assignments (identifiers can be requested through: swaymsg -t get_tree | grep app_id)
+assign [app_id="firefoxdeveloperedition"] 1
