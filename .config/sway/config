@@ -95,3 +95,9 @@ assign [app_id="firefoxdeveloperedition"] 1
 ### Floating Windows
 for_window [app_id="mpv"] floating enable
 for_window [app_id="keepassxc"] floating enable
+
+### Autostart
+exec firefox-developer-edition
+exec waybar
+
+include /etc/sway/config.d/*
