@@ -13,3 +13,9 @@ set $launcher fuzzel
 ### Outputs (identifiers can be requested through: swaymsg -t get_outputs)
 output * adaptive_sync on bg #000000 solid_color
 output DP-2 resolution 2560x1440 position 0,0
+
+### Inputs (identifiers can be requested through: swaymsg -t get_inputs)
+# Disable mouse acceleration.
+input "type:pointer" accel_profile flat 
+# Remap caps look to escape.
+input "type:keyboard" xkb_options caps:escape 
