@@ -9,6 +9,7 @@ set {
   $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
   $browser firefox-developer-edition
   $pass keepassxc
+  $pass_id org.keepassxc.KeePassXC
   $launcher fuzzel
 }
 
@@ -33,7 +34,7 @@ bindsym {
   $mod+Shift+r reload
   $mod+m exec $launcher -b 1c1b22ff -t fbfbfeff -f Hack Nerd Font Mono:size=12
   $mod+s exec $screenshot
-  $mod+p exec /home/matthias/keepass.sh
+  $mod+p exec swaymsg [app_id=$pass_id] scratchpad show || exec $pass
 
   ## Movements
   $mod+$left focus left
@@ -109,6 +110,10 @@ assign [app_id="firefoxdeveloperedition"] 1
 for_window {
   [app_id="mpv"] floating enable
   [app_id="keepassxc"] floating enable
+  [app_id=$pass_id] {
+    move to scratchpad
+    [app_id=$pass_id] scratchpad show
+  }
 }
 
 ### Autostart
