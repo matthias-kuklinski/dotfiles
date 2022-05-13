@@ -1,103 +1,120 @@
 ### Constants
-set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
-set $term foot
-set $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
-set $browser firefox-developer-edition
-set $pass keepassxc
-set $launcher fuzzel
+set {
+  $mod Mod4
+  $left h
+  $down j
+  $up k
+  $right l
+  $term foot
+  $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
+  $browser firefox-developer-edition
+  $pass keepassxc
+  $launcher fuzzel
+}
 
 ### Outputs (identifiers can be requested through: swaymsg -t get_outputs)
-output * adaptive_sync on bg #000000 solid_color
-output DP-2 resolution 2560x1440 position 0,0
+output {
+  * adaptive_sync on bg #000000 solid_color
+  DP-2 resolution 2560x1440 position 0,0
+}
 
 ### Inputs (identifiers can be requested through: swaymsg -t get_inputs)
-# Disable mouse acceleration.
-input "type:pointer" accel_profile flat 
-# Remap caps look to escape.
-input "type:keyboard" xkb_options caps:escape 
+input {
+  # Disable mouse acceleration.
+  "type:pointer" accel_profile flat 
+  # Remap caps look to escape.
+  "type:keyboard" xkb_options caps:escape 
+}
 
 ### Key bindings
-bindsym $mod+Return exec $term
-bindsym $mod+q kill
-bindsym $mod+Shift+r reload
-bindsym $mod+m exec $launcher -b 1c1b22ff -t fbfbfeff -f Hack Nerd Font Mono:size=12
-floating_modifier $mod normal
-bindsym $mod+s exec $screenshot
-bindsym $mod+p exec /home/matthias/keepass.sh
+bindsym {
+  $mod+Return exec $term
+  $mod+q kill
+  $mod+Shift+r reload
+  $mod+m exec $launcher -b 1c1b22ff -t fbfbfeff -f Hack Nerd Font Mono:size=12
+  $mod+s exec $screenshot
+  $mod+p exec /home/matthias/keepass.sh
 
-## Movement
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
+  ## Movements
+  $mod+$left focus left
+  $mod+$down focus down
+  $mod+$up focus up
+  $mod+$right focus right
 
-## Workspace
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+  ## Workspaces
+  $mod+1 workspace number 1
+  $mod+2 workspace number 2
+  $mod+3 workspace number 3
+  $mod+4 workspace number 4
+  $mod+5 workspace number 5
+  $mod+6 workspace number 6
+  $mod+7 workspace number 7
+  $mod+8 workspace number 8
+  $mod+9 workspace number 9
+  $mod+0 workspace number 10
+  $mod+Shift+1 move container to workspace number 1
+  $mod+Shift+2 move container to workspace number 2
+  $mod+Shift+3 move container to workspace number 3
+  $mod+Shift+4 move container to workspace number 4
+  $mod+Shift+5 move container to workspace number 5
+  $mod+Shift+6 move container to workspace number 6
+  $mod+Shift+7 move container to workspace number 7
+  $mod+Shift+8 move container to workspace number 8
+  $mod+Shift+9 move container to workspace number 9
+  $mod+Shift+0 move container to workspace number 10
 
-## Layout
-# Container/Window Arrangement
-bindsym $mod+shift+$left move left
-bindsym $mod+shift+$down move down
-bindsym $mod+shift+$up move up
-bindsym $mod+shift+$right move right
+  ## Layout
+  # Container/Window Arrangement
+  $mod+shift+$left move left
+  $mod+shift+$down move down
+  $mod+shift+$up move up
+  $mod+shift+$right move right
 
-bindsym $mod+Period splith
-bindsym $mod+Comma splitv
-bindsym $mod+f fullscreen
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+  $mod+Period splith
+  $mod+Comma splitv
+  $mod+f fullscreen
+  $mod+Shift+space floating toggle
+  $mod+space focus mode_toggle
+
+  ## Resize
+  $mod+r mode "resize"
+}
 
 ## Mode
 mode "resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+    bindsym {
+      $left resize shrink width 10px
+      $down resize grow height 10px
+      $up resize shrink height 10px
+      $right resize grow width 10px
+      Return mode "default"
+      Escape mode "default"
+    }
 }
-bindsym $mod+r mode "resize"
 
 ### Visuals
 default_border pixel 2
 default_floating_border pixel 2
 client.focused #61afef #61afef #61afef #fbfbfe
 smart_borders on
-gaps outer -4
-gaps inner 8
+gaps {
+  outer -4
+  inner 8
+}
 
 ### Assignments (identifiers can be requested through: swaymsg -t get_tree | grep app_id)
 assign [app_id="firefoxdeveloperedition"] 1
 
 ### Floating Windows
-for_window [app_id="mpv"] floating enable
-for_window [app_id="keepassxc"] floating enable
+for_window {
+  [app_id="mpv"] floating enable
+  [app_id="keepassxc"] floating enable
+}
 
 ### Autostart
-exec firefox-developer-edition
-exec waybar
+exec {
+  firefox-developer-edition
+  waybar
+}
 
 include /etc/sway/config.d/*
