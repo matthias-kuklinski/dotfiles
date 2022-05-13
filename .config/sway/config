@@ -35,7 +35,6 @@ bindsym {
   $mod+m exec $launcher -b 1c1b22ff -t fbfbfeff -f Hack Nerd Font Mono:size=12
   $mod+s exec $screenshot
   $mod+p exec swaymsg [app_id=$pass_id] scratchpad show || exec $pass
-
   ## Movements
   $mod+$left focus left
   $mod+$down focus down
@@ -93,6 +92,9 @@ mode "resize" {
     }
 }
 
+# Set the floating_modifier.
+floating_modifier $mod normal
+
 ### Visuals
 default_border pixel 2
 default_floating_border pixel 2
@@ -116,10 +118,14 @@ for_window {
   }
 }
 
+### Status Bar
+bar {
+  swaybar_command waybar
+}
+
 ### Autostart
 exec {
   firefox-developer-edition
-  waybar
 }
 
 include /etc/sway/config.d/*
