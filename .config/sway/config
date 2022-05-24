@@ -10,6 +10,7 @@ set {
   $launcher fuzzel
   $browser firefox-developer-edition
   $browser_id firefoxdeveloperedition
+  $notification_daemon mako
   $pass keepassxc
   $pass_id org.keepassxc.KeePassXC
 }
@@ -127,6 +128,7 @@ bar {
 ### Autostart
 exec {
   $browser
+  $notification_daemon
 }
 
 include /etc/sway/config.d/*
