@@ -7,10 +7,11 @@ set {
   $right l
   $term foot
   $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
+  $launcher fuzzel
   $browser firefox-developer-edition
+  $browser_id firefoxdeveloperedition
   $pass keepassxc
   $pass_id org.keepassxc.KeePassXC
-  $launcher fuzzel
 }
 
 ### Outputs (identifiers can be requested through: swaymsg -t get_outputs)
@@ -106,12 +107,12 @@ gaps {
 }
 
 ### Assignments (identifiers can be requested through: swaymsg -t get_tree | grep app_id)
-assign [app_id="firefoxdeveloperedition"] 1
+assign [app_id=$browser_id] 1
 
 ### Floating Windows
 for_window {
   [app_id="mpv"] floating enable
-  [app_id="keepassxc"] floating enable
+  [app_id=$pass] floating enable
   [app_id=$pass_id] {
     move to scratchpad
     [app_id=$pass_id] scratchpad show
@@ -125,7 +126,7 @@ bar {
 
 ### Autostart
 exec {
-  firefox-developer-edition
+  $browser
 }
 
 include /etc/sway/config.d/*
