@@ -19,3 +19,5 @@ p = push
 r = restore
 rs = restore --staged
 s = status
+sw = switch
+swc = switch --create
