@@ -18,7 +18,7 @@ set {
 ### Outputs (identifiers can be requested through: swaymsg -t get_outputs)
 output {
   * adaptive_sync on bg #000000 solid_color
-  DP-2 resolution 2560x1440 position 0,0
+  DP-3 resolution 2560x1440 position 0,0
 }
 
 ### Inputs (identifiers can be requested through: swaymsg -t get_inputs)
