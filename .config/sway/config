@@ -8,8 +8,8 @@ set {
   $term foot
   $screenshot grim -g "$(slurp)" - | wl-copy -t image/png
   $launcher fuzzel
-  $browser firefox-developer-edition
-  $browser_id firefoxdeveloperedition
+  $browser firefox
+  $browser_id firefox
   $notification_daemon mako
   $pass keepassxc
   $pass_id org.keepassxc.KeePassXC
