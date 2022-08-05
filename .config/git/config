@@ -23,6 +23,7 @@ r = restore
 rs = restore --staged
 rss = reset --soft
 rsh = reset --hard
+rv = revert
 s = status
 sh = show
 sw = switch
