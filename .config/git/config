@@ -13,6 +13,7 @@ a = add
 af = add -f
 ap = add -p
 c = commit --message
+cfg = config --list
 d = diff
 ds = diff --staged
 l = log
