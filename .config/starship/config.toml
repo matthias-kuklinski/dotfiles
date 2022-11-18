@@ -24,3 +24,6 @@ format = "[$hostname](bold blue) in "
 
 [username]
 format = "[$user](bold blue) on "
+
+[cmd_duration]
+min_time = 5000
