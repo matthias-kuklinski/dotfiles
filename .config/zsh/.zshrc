@@ -5,6 +5,7 @@ SAVEHIST=10000 # Amount of commands stored in the history file.
 
 # Environment Variables
 export KEYTIMEOUT=1 # Wait 10 milliseconds for another key to be pressed.
+export STARSHIP_CONFIG=/home/matthias/.config/starship/config.toml # Export the starship configuration file location.
 
 # Settings
 unsetopt beep # Do not beep on erros.
