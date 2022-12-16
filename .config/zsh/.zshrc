@@ -22,9 +22,12 @@ autoload -Uz compinit # Mark the completion system as a function.
 compinit # Initialize the completion system.
 
 # Aliases
+alias c="clear"
+alias d="docker"
+alias g="git"
+alias k="kubectl"
 alias l="ls -h --color=auto"
 alias ll="ls -Ahl --color=auto"
-alias c="clear"
 alias n="nvim"
 
 # Vi-mode
