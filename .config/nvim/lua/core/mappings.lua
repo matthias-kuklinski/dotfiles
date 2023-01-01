@@ -1,13 +1,24 @@
-local map = vim.api.nvim_set_keymap
-local options = { noremap = true, silent = true }
+return {
+  general = {
+    n = {
+      ["<ESC>"] = "<cmd> noh <CR>"
+    }
+  },
 
-vim.g.mapleader = ' ' -- Space
+  movement = {
+    n = {
+      ["<c-e>"] = "<cmd> NvimTreeToggle <CR>",
+      ["<c-h>"] = ":wincmd h <CR>",
+      ["<c-j>"] = ":wincmd j <CR>",
+      ["<c-k>"] = ":wincmd k <CR>",
+      ["<c-l>"] = ":wincmd l <CR>"
+    }
+  },
 
-map('n', '<c-h>', ':wincmd h<CR>', options)
-map('n', '<c-j>', ':wincmd j<CR>', options)
-map('n', '<c-k>', ':wincmd k<CR>', options)
-map('n', '<c-l>', ':wincmd l<CR>', options)
-map('n', '<c-,>', ':wincmd s<CR>', options)
-map('n', '<c-.>', ':wincmd v<CR>', options)
-
-map('n', '<leader>e', ':NvimTreeToggle<CR>', options)
+  layout = {
+    n = {
+      ["<c-,>"] = ":wincmd s <CR>",
+      ["<c-.>"] = ":wincmd v <CR>"
+    }
+  }
+}
