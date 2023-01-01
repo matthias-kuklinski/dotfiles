@@ -1,7 +1,9 @@
 return {
   setOptions = function(options)
-    for k, v in pairs(options) do
-     vim.opt[k] = v
+    for option, value in pairs(options) do
+      vim.opt[option] = value
+    end
+  end,
     end
   end
 }
