@@ -8,6 +8,7 @@ require("core.packer")
 require("core.mappings")
 require("plugin.nvim-tree")
 require("plugin.nvim-cmp")
+require("plugin.nvim-treesitter")
 
 require('github-theme').setup({
   theme_style = "dark_default"

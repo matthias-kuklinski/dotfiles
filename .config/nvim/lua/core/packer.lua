@@ -7,4 +7,8 @@ return require("packer").startup(function()
   use "L3MON4D3/LuaSnip"
   use "onsails/lspkind-nvim"
   use "projekt0n/github-nvim-theme"
+  use {
+      "nvim-treesitter/nvim-treesitter",
+      run = ":TSUpdate"
+  }
 end)
