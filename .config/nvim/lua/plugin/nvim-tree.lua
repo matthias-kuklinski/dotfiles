@@ -1,3 +1,1 @@
-require("nvim-tree").setup {
-  auto_close = true,
-}
+require("nvim-tree").setup()
