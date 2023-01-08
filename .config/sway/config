@@ -31,7 +31,7 @@ input {
 
 ### Key bindings
 bindsym {
-  $mod+Return exec $term
+  $mod+n exec $term
   $mod+q kill
   $mod+Shift+r reload
   $mod+m exec $launcher -b 1c1b22ff -t fbfbfeff -f Hack Nerd Font Mono:size=12
