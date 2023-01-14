@@ -10,6 +10,7 @@ require("core.mappings")
 require("plugin.nvim-tree")
 require("plugin.nvim-cmp")
 require("plugin.nvim-treesitter")
+require("plugin.nvim-telescope")
 
 require('github-theme').setup({
   theme_style = "dark_default"
