@@ -1,3 +1,4 @@
+vim.g.mapleader = " "
 utils = require("core.utils")
 utils.setOptions(require("core.options"))
 utils.set_mappings(require("core.mappings").general)
